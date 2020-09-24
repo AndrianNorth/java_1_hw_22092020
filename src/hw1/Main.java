@@ -17,7 +17,7 @@ public class Main {
         negativeOrPositive(0);
         System.out.println(negativeTrue(-3));
         hello_name("Джон");
-//        bissextile(416);
+        bissextile(2020);
 
     }
 
@@ -53,14 +53,15 @@ public class Main {
         System.out.println("Привет, " + name + "!");
     }
 
-//    static void bissextile(int year) {
-//        if ((year < 100) && (year % 4 == 0)) {
-//            System.out.println(year + " год високосный");
-//        } else if ((year > 100) && (year % 400 == 0)) {
-//            System.out.println(year + " год високосный");
-//        } else {
-//            System.out.println(year + " год не високосный");
-//        }
-//    } В разработке
-
+    static void bissextile(int year) {
+        if (year % 400 == 0) {
+            System.out.println(year + " год високосный");
+        } else if (year % 100 == 0) {
+            System.out.println(year + " год не високосный");
+        } else if (year % 4 == 0) {
+            System.out.println(year + " год високосный");
+        } else {
+            System.out.println(year + " год не високосный");
+        }
+    }
 }
