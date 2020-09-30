@@ -3,7 +3,7 @@ package lesson2;
 import java.util.Arrays;
 
 public class MainHW {
-
+ // Сдаю что успел, постараюсь сделать со звездочками другие задания
     public static void main(String[] args) {
     binaryNumbers();
     pushArray();

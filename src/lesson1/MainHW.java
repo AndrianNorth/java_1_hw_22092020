@@ -1,6 +1,6 @@
-package hw1;
+package lesson1;
 
-public class Main {
+public class MainHW {
     public static void main(String[] args) {
 
         byte byteValue = 120;
@@ -17,7 +17,7 @@ public class Main {
         negativeOrPositive(0);
         System.out.println(negativeTrue(-3));
         hello_name("Джон");
-        bissextile(2020);
+        bissextile(1900);
 
     }
 
@@ -25,15 +25,19 @@ public class Main {
         return a * (b + (c / d));
     }
 
-    static boolean range(int a, int b) {
+/*    static boolean range(int a, int b) {
         if (10 <= (a + b) && (a + b) <= 20) {
             return true;
         } else {
             return false;
         }
+    }*/
+
+    public static boolean range(int a, int b) {
+        return (a + b >= 10) && (a + b <= 20);
     }
 
-    static void negativeOrPositive(int x) {
+    public static void negativeOrPositive(int x) {
         if (x >= 0) {
             System.out.println("number is positive");
         } else {
@@ -41,19 +45,16 @@ public class Main {
         }
     }
 
-    static boolean negativeTrue(int x) {
-        if (x < 0) {
-            return true;
-        } else {
-            return false;
-        }
+    public static boolean negativeTrue(int x) {
+        return x < 0;
     }
 
     static void hello_name(String name) {
-        System.out.println("Привет, " + name + "!");
+//        System.out.println("Привет, " + name + "!");
+        System.out.printf("Привет, %s !\n ", name);
     }
 
-    static void bissextile(int year) {
+    /*static void bissextile(int year) {
         if (year % 400 == 0) {
             System.out.println(year + " год високосный");
         } else if (year % 100 == 0) {
@@ -62,6 +63,14 @@ public class Main {
             System.out.println(year + " год високосный");
         } else {
             System.out.println(year + " год не високосный");
+        }
+    }*/
+
+    static void bissextile(int year) {
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+            System.out.println("Год является високосным");
+        } else {
+            System.out.println("Год не является високосным");
         }
     }
 }
