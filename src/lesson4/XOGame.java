@@ -21,7 +21,7 @@ public class XOGame {
         while (true) {
             humanTurn();
             printMap();
-            if(checkWin(DOT_X)){
+            if (checkWin(DOT_X)) {
                 System.out.println("Вы победитель!");
                 break;
             }
@@ -32,7 +32,7 @@ public class XOGame {
 
             aiTurn();
             printMap();
-            if(checkWin(DOT_O)){
+            if (checkWin(DOT_O)) {
                 System.out.println("Комьютер победил!");
                 break;
             }
@@ -111,18 +111,31 @@ public class XOGame {
     }
 
     static boolean checkWin(char c) {
-            for (int i = 0, j = 0; i < SIZE; i++) {
-                if (map[i][j] == c && map[i][j + 1] == c && map[i][j + 2] == c) { return true; }
+        for (int i = 0, j = 0; i < SIZE; i++) {
+            if (map[i][j] == c && map[i][j + 1] == c && map[i][j + 2] == c) {
+                return true;
             }
+        }
 
-            for (int i = 0, j = 0; j < SIZE; j++) {
-                if (map[i][j] == c && map[i + 1][j] == c && map[i + 2][j] == c) { return true; }
+        for (int i = 0, j = 0; j < SIZE; j++) {
+            if (map[i][j] == c && map[i + 1][j] == c && map[i + 2][j] == c) {
+                return true;
             }
+        }
 
-            if (map[0][0] == c && map[1][1] == c && map[2][2] == c) { return true; }
-            if (map[0][2] == c && map[1][1] == c && map[2][0] == c) { return true; }
+//        for (
+        int i = 0;
+//            i < SIZE; i++) {
+            if (map[i][i] == c && map[i + 1][i + 1] == c && map[i + 2][i + 2] == c) { return true; }
+//        }
 
-            return false;
+//        for (
+//        int i = 0;
+//        i < SIZE; i++) {
+            if (map[i][i + 2] == c && map[i + 1][i + 1] == c && map[i + 2][i] == c) { return true; }
+//        }
+
+        return false;
     }
 
 }
