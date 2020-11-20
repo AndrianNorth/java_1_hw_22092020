@@ -1,6 +1,7 @@
 package lesson0205;
 
 import static lesson0205.Main.HALF;
+import static lesson0205.Main.SIZE;
 
 public class multiThreads implements Runnable {
     float[] arr;
@@ -20,7 +21,8 @@ public class multiThreads implements Runnable {
 
         Thread t2 = new Thread(() ->{
             for (int i = 0; i < a2.length; i++) {
-                a2[i] = (float) (a2[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
+                a2[i] = (float) (a2[i] * Math.sin(0.2f + (i + HALF) / 5) * Math.cos(0.2f + (i + HALF) / 5)
+                        * Math.cos(0.4f + (i + HALF) / 2));
             }
         });
 
@@ -38,12 +40,12 @@ public class multiThreads implements Runnable {
         System.arraycopy(a2, 0, arr, 5000000, 5000000);
 
         long b = System.currentTimeMillis();
+        System.out.println(arr[1]);
         System.out.println("Время мультипотока " + (b - a));
     }
 
 
     @Override
     public void run() {
-
     }
 }
