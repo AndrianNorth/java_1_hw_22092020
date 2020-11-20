@@ -8,19 +8,22 @@ public class Main{
 
     public static void main(String[] args) {
 
-        float[] arr = new float[SIZE];
+        float[] arr1 = new float[SIZE];
+        float[] arr2 = new float[SIZE];
+
 
 //        for (int i = 0; i < arr.length; i++) {
 //            arr[i] = 1;
 //        }
 
-        Arrays.fill(arr, 1);
+        Arrays.fill(arr1, 1);
+        Arrays.fill(arr2, 1);
 
         singleThread t1 = new singleThread();
-        t1.singleThread(arr);
+        t1.singleThread(arr1);
 
         multiThreads t2 = new multiThreads();
-        t2.runMulti(arr);
+        t2.runMulti(arr2);
 
     }
 

@@ -8,7 +8,6 @@ public class singleThread {
             arr[i] = (float) (arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
         }
         long b = System.currentTimeMillis();
-        System.out.println(arr[1]);
         System.out.println("Время одного потока " + (b - a));
     }
 }

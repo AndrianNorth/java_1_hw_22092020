@@ -40,7 +40,6 @@ public class multiThreads implements Runnable {
         System.arraycopy(a2, 0, arr, 5000000, 5000000);
 
         long b = System.currentTimeMillis();
-        System.out.println(arr[1]);
         System.out.println("Время мультипотока " + (b - a));
     }
 
