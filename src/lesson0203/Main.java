@@ -26,7 +26,7 @@ public class Main extends Phonebook {
 
         p.add("Ivanov", "332235");
 
-        p.get("Ivanov");
+        p.get("Nazarov");
 
     }
 

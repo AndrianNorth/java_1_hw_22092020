@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lesson0204.Controller">
+    <Button minWidth="70.0" onAction="#onClickBtnSend" text="Send" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS"/>
+    <TextArea fx:id="textArea" minWidth="500" GridPane.rowIndex="0" GridPane.hgrow="ALWAYS"  GridPane.vgrow="ALWAYS" />
+    <TextArea fx:id="usersList" minWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <TextField fx:id="textField" onKeyPressed="#KeyEnter" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+
+</GridPane>
