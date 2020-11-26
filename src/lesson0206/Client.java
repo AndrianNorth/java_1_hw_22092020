@@ -39,7 +39,7 @@ public class Client {
                     System.out.println("Клиент отключился");
                     break;
                 }
-                System.out.println("Клиент: " + str);
+                System.out.println("Сервер: " + str);
             }
         } catch (IOException e) {
             e.printStackTrace();
