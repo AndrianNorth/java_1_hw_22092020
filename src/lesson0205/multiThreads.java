@@ -19,7 +19,7 @@ public class multiThreads implements Runnable {
             }
         });
 
-        Thread t2 = new Thread(() ->{
+        Thread t2 = new Thread(() -> {
             for (int i = 0; i < a2.length; i++) {
                 a2[i] = (float) (a2[i] * Math.sin(0.2f + (i + HALF) / 5) * Math.cos(0.2f + (i + HALF) / 5)
                         * Math.cos(0.4f + (i + HALF) / 2));
@@ -42,7 +42,6 @@ public class multiThreads implements Runnable {
         long b = System.currentTimeMillis();
         System.out.println("Время мультипотока " + (b - a));
     }
-
 
     @Override
     public void run() {
